@@ -18,13 +18,15 @@ ul {
   list-style: none;
 }
 
+button {
+  all: unset; /* Скидає всі стандартні стилі */
+  display: inline-block; /* Відновлює можливість задавати розміри */
+  cursor: pointer;
+}
+
 a {
   color: currentColor;
   text-decoration: none;
-}
-
-button {
-  cursor: pointer;
 }
 
 img {
@@ -32,3 +34,22 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+form {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  outline: none; /* Видаляє обводку при фокусі, але можна налаштувати */
+  box-sizing: border-box;
+}
+
+
