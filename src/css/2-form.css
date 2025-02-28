@@ -1,9 +1,5 @@
-.container-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 408px;
-  height: 296px;
+.container.form {
+
 }
 
 .feedback-form {
@@ -13,12 +9,11 @@
 
   gap: 16px;
   border-radius: 8px;
-  padding: 24px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  /*align-items: center;*/
 }
 
 .label {

@@ -1,28 +1,31 @@
 @import url("simplelightbox/dist/simple-lightbox.min.css");
 
-ul, li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
-  line-height: 0;
-  border: none;
-}
+.container.gallery {
 
-body {
-  color: antiquewhite;
-  text-align: center;
-  font-family: Verdana, sans-serif;
 }
 
 .gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
   gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-li img {
+.gallery-image {
   width: 360px;
-  height: 300px;
+  height: 200px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.gallery-image:hover {
+  transform: scale(1.1);
+  color: #FFFFFF;
+}
+
+.sl-caption {
+  text-align: center;
+}
+

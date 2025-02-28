@@ -89,4 +89,5 @@ galleryList.innerHTML = galleryCardTemplate
 
 new SimpleLightbox('.gallery-link', {
   captionsData: 'alt',
+  captionDelay: 250,
   overlayOpacity: 1});
