@@ -1,3 +1,6 @@
+import SimpleLightbox from "simplelightbox";
+
+
 const images = [
   {
     preview:
@@ -65,16 +68,14 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery')
-console.log
 
 const createGalleryCard = ({preview, original, description}) => {
   return `
-    <li className="gallery-item">
-        <a className="gallery-link" href="${original}">
+    <li class="gallery-item">
+        <a class="gallery-link" href="${original}">
             <img
-                className="gallery-image"
+                class="gallery-image"
                 src="${preview}"
-                data-source="${original}"
                 alt="${description}"
             />
         </a>
@@ -84,22 +85,8 @@ const createGalleryCard = ({preview, original, description}) => {
 
 const galleryCardTemplate = images.map(image => createGalleryCard(image)).join('')
 
-
 galleryList.innerHTML = galleryCardTemplate
 
-galleryList.addEventListener('click', event => {
-  event.preventDefault();
-  if (event.target === event.currentTarget) {
-    return
-  }
-
-  const targetLink = event.target.dataset.source
-
-  const imageInfo = images.find(image => image.original === targetLink)
-
-  const instance = basicLightbox.create(`
-    <img src="${imageInfo.original}">
-    <p>${imageInfo.description}</p>
-`)
-  instance.show()
-})
+new SimpleLightbox('.gallery-link', {
+  captionsData: 'alt',
+  overlayOpacity: 1});
