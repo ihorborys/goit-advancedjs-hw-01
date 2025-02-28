@@ -1,9 +1,5 @@
 @import url("simplelightbox/dist/simple-lightbox.min.css");
 
-.container.gallery {
-
-}
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
